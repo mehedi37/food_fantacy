@@ -1,0 +1,31 @@
+﻿@model List<food_fantacy.Models.ProductsDetails>
+
+<div class="container mt-5">
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info" role="alert">
+            No products found.
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var product in Model)
+            {
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="@product.ProductImage" class="card-img-top" alt="@product.ProductName">
+                        <div class="card-body">
+                            <h5 class="card-title">@product.ProductName</h5>
+                            <p class="card-text">
+                                @product.ProductDescription
+                            </p>
+                            <p class="card-text"><strong>@product.ProductPrice.ToString("C")</strong></p>
+                            <a href="@Url.Action("FoodDetails", "Home", new { id = product.ProductId })" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
