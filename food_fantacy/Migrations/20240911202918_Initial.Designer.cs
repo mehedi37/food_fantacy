@@ -11,8 +11,8 @@ using food_fantacy.Data;
 namespace food_fantacy.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240911200910_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240911202918_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
