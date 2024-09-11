@@ -49,5 +49,18 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    @section Styles {
+        <style>
+            .btn-primary {
+                background-color: orangered;
+                border-color: orangered;
+            }
+
+            .nav-link.text-orangered.active {
+                background-color: orangered !important;
+            }
+        </style>
+    }
+
 </body>
 </html>
